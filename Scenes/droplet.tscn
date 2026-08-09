@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://38bvd75x3ya3"]
+
+[ext_resource type="Texture2D" uid="uid://b0y8ktldajd7n" path="res://Assets/kenney_abstract-platformer/PNG/Items/blueGem.png" id="1_jty2x"]
+[ext_resource type="Script" uid="uid://4hieb3seq2uf" path="res://Scripts/droplet.gd" id="1_w2tup"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ex1bo"]
+radius = 16.0
+
+[node name="Droplet" type="Area2D" unique_id=1608203421]
+script = ExtResource("1_w2tup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1665649698]
+shape = SubResource("CircleShape2D_ex1bo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=744374476]
+texture = ExtResource("1_jty2x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

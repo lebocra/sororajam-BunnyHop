@@ -8,6 +8,7 @@
 load_path = "res://.godot/imported/plantTop_leaves.png-d47f1351c2c6064b55caf27fa9ac28dc.ctex"
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_l87m8"]
+resource_local_to_scene = true
 frames = 2
 pause = true
 one_shot = true
@@ -20,6 +21,8 @@ script = ExtResource("1_3xnho")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2035663601]
 texture = SubResource("AnimatedTexture_l87m8")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
 
 [node name="Interactable" parent="." unique_id=473870243 instance=ExtResource("1_5dgew")]
 interact_name = "Regar Retoño"
