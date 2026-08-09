@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://5gu11c8fwltu" path="res://Scripts/player_controller.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://dtbxe4iyuwnqq" path="res://Assets/kenney_abstract-platformer/PNG/Other/doorGreen.png" id="2_kyqiw"]
+[ext_resource type="PackedScene" uid="uid://wemcigmw6qw2" path="res://Scenes/interacting_component.tscn" id="3_gntrk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bs43c"]
 radius = 18.0
 height = 60.0
 
-[node name="Node2D" type="CharacterBody2D" unique_id=1914122165]
+[node name="Player" type="CharacterBody2D" unique_id=1914122165]
 script = ExtResource("1_kyqiw")
 
 [node name="Graphics" type="Node2D" parent="." unique_id=1659516938]
@@ -22,5 +23,7 @@ root_node = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2076695895]
 shape = SubResource("CapsuleShape2D_bs43c")
+
+[node name="InteractingComponent" parent="." unique_id=1516666767 instance=ExtResource("3_gntrk")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1453923669]

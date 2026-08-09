@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dmew314d8r3tk"]
+
+[ext_resource type="Script" uid="uid://d3hbgl56ko87w" path="res://Scripts/sapling.gd" id="1_3xnho"]
+[ext_resource type="PackedScene" uid="uid://5awjehfr8e02" path="res://Scenes/interactable.tscn" id="1_5dgew"]
+[ext_resource type="Texture2D" uid="uid://b7jras2dausmo" path="res://Assets/kenney_abstract-platformer/PNG/Other/plantTop_yellow.png" id="2_noemw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xnho"]
+load_path = "res://.godot/imported/plantTop_leaves.png-d47f1351c2c6064b55caf27fa9ac28dc.ctex"
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_l87m8"]
+frames = 2
+pause = true
+one_shot = true
+frame_0/texture = SubResource("CompressedTexture2D_3xnho")
+frame_1/texture = ExtResource("2_noemw")
+frame_1/duration = 1.0
+
+[node name="Sapling" type="Node2D" unique_id=601039269]
+script = ExtResource("1_3xnho")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2035663601]
+texture = SubResource("AnimatedTexture_l87m8")
+
+[node name="Interactable" parent="." unique_id=473870243 instance=ExtResource("1_5dgew")]
+interact_name = "Regar Retoño"
